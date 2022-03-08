@@ -1,0 +1,20 @@
+{
+   "regexManagers":[
+      {
+         "fileMatch":[
+            "^\\.github\\/workflows\\/test-role-.*\\.yml"
+         ],
+         "matchStrings":[
+            "(?<depName>ansible)-version: \\['(?<currentValue>.*?)'\\]"
+         ],
+         "datasourceTemplate":"pypi"
+      }
+   ],
+
+   "packageRules":[
+      {
+         "matchPaths": ["**/.github/workflows/test-role-**"],
+         "groupName": "test-role"
+      }
+   ]
+}

@@ -1,0 +1,7 @@
+{
+  "extends": [
+    "config:base"
+  ],
+  "commitBody": "Signed-off-by: Renovate Bot <bot@renovateapp.com>",
+  "dependencyDashboard": true
+}
