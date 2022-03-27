@@ -1,0 +1,13 @@
+{
+   "regexManagers":[
+      {
+         "fileMatch":[
+            "Containerfile"
+         ],
+         "matchStrings":[
+            "'(?<depName>pip)==(?<currentValue>.*?)'"
+         ],
+         "datasourceTemplate":"pypi"
+      }
+   ]
+}
