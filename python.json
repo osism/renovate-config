@@ -1,0 +1,7 @@
+{
+  "pip_requierements": {
+    "fileMatch": [
+      "^docs\\/requirements\\.txt$"
+    ]
+  }
+}
