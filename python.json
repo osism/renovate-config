@@ -1,7 +1,13 @@
 {
   "pip_requierements": {
     "fileMatch": [
-      "^docs\\/requirements\\.txt$"
+      "docs/requirements.txt",
+      "documentation/requirements.txt",
+      "molecule/requirements.txt",
+      "environments/manager/requirements.txt",
+      "files/requirements.txt",
+      "files/src/requirements.txt",
+      "files/src/templates/requirements.txt.j2"
     ]
   }
 }
