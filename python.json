@@ -1,5 +1,5 @@
 {
-  "pip_requierements": {
+  "pip_requirements": {
     "fileMatch": [
       "docs/requirements.txt",
       "documentation/requirements.txt",
