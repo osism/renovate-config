@@ -2,18 +2,19 @@
    "regexManagers":[
       {
          "fileMatch":[
-            "^\\.github\\/workflows\\/test-role-.*\\.yml"
+            "^\\.zuul\\.yaml$"
          ],
          "matchStrings":[
-            "(?<depName>ansible)-version: \\['(?<currentValue>.*?)'\\]"
+            "ansible_molecule_ansible_version: \\\"(?<currentValue>.*?)\\\""
          ],
+         "depNameTemplate": "ansible",
          "datasourceTemplate":"pypi"
       }
    ],
 
    "packageRules":[
       {
-         "matchPaths": ["**/.github/workflows/test-role-**"],
+         "matchPaths": ["**/.zuul.yaml"],
          "groupName": "test-role"
       }
    ]
