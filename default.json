@@ -3,5 +3,6 @@
     "config:base"
   ],
   "commitBody": "Signed-off-by: Renovate Bot <bot@renovateapp.com>",
-  "dependencyDashboard": true
+  "dependencyDashboard": true,
+  "labels": ["renovate"]
 }
