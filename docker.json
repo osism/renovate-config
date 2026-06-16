@@ -1,8 +1,9 @@
 {
-   "regexManagers":[
+   "customManagers":[
       {
-         "fileMatch":[
-            "Containerfile"
+         "customType":"regex",
+         "managerFilePatterns":[
+            "/Containerfile/"
          ],
          "matchStrings":[
             "'(?<depName>pip)==(?<currentValue>.*?)'"
@@ -10,8 +11,9 @@
          "datasourceTemplate":"pypi"
       },
       {
-         "fileMatch":[
-            "Containerfile"
+         "customType":"regex",
+         "managerFilePatterns":[
+            "/Containerfile/"
          ],
          "matchStrings":[
             "ARG VERSION=(?<currentValue>.*?)  # renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)\n"

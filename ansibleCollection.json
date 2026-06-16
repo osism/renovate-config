@@ -1,8 +1,9 @@
 {
-   "regexManagers":[
+   "customManagers":[
       {
-         "fileMatch":[
-            "^\\.zuul\\.yaml$"
+         "customType":"regex",
+         "managerFilePatterns":[
+            "/^\\.zuul\\.yaml$/"
          ],
          "matchStrings":[
             "ansible_molecule_ansible_version: \\\"(?<currentValue>.*?)\\\""
@@ -14,7 +15,7 @@
 
    "packageRules":[
       {
-         "matchPaths": ["**/.zuul.yaml"],
+         "matchFileNames": ["**/.zuul.yaml"],
          "groupName": "test-role"
       }
    ]
