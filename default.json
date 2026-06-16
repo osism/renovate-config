@@ -4,5 +4,7 @@
   ],
   "commitBody": "Signed-off-by: Renovate Bot <bot@renovateapp.com>",
   "dependencyDashboard": true,
-  "labels": ["renovate"]
+  "labels": ["renovate"],
+  "prHourlyLimit": 0,
+  "prConcurrentLimit": 0
 }
