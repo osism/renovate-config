@@ -1,6 +1,6 @@
 {
   "pip_requirements": {
-    "fileMatch": [
+    "managerFilePatterns": [
       "docs/requirements.txt",
       "documentation/requirements.txt",
       "molecule/requirements.txt",
