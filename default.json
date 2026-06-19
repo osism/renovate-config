@@ -6,5 +6,35 @@
   "dependencyDashboard": true,
   "labels": ["renovate"],
   "prHourlyLimit": 0,
-  "prConcurrentLimit": 0
+  "prConcurrentLimit": 0,
+  "minimumReleaseAge": "3 days",
+  "internalChecksFilter": "strict",
+  "osvVulnerabilityAlerts": true,
+  "packageRules": [
+    {
+      "description": "Exempt OSISM's own releases from the 3-day delay so the team can bump fast",
+      "matchPackageNames": [
+        "osism",
+        "osism.*",
+        "netbox-manager",
+        "openstack-image-manager",
+        "openstack-flavor-manager",
+        "registry.osism.tech/osism/**"
+      ],
+      "minimumReleaseAge": null
+    },
+    {
+      "description": "Throttle high-frequency third-party releasers to weekly batches; security fixes bypass schedule automatically",
+      "matchPackageNames": [
+        "ghcr.io/astral-sh/uv",
+        "boto3",
+        "fastapi",
+        "typer",
+        "cryptography",
+        "setuptools",
+        "@types/node"
+      ],
+      "schedule": ["before 9am on monday"]
+    }
+  ]
 }
