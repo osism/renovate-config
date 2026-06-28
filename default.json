@@ -35,6 +35,14 @@
         "@types/node"
       ],
       "schedule": ["before 9am on monday"]
+    },
+    {
+      "description": "OSISM-rebuilt images carry a Bitnami-style -rN downstream revision (same upstream version, rebuilt by OSISM with local patches). Use regex versioning so Renovate tracks the -rN revision and future upstream bumps; the default docker versioning would treat -rN as an opaque compatibility suffix (like -alpine) and never bump it. The -r part is optional so a bare X.Y.Z pin is still parsed and upgraded to X.Y.Z-r1. Scope to images that actually use this scheme; do not widen to registry.osism.tech/osism/** (most images use date-based or codename tags this regex would reject).",
+      "matchDatasources": ["docker"],
+      "matchPackageNames": [
+        "registry.osism.tech/osism/ara-server"
+      ],
+      "versioning": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)(?:-r(?<build>\\d+))?$"
     }
   ]
 }
