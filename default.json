@@ -16,6 +16,7 @@
       "matchPackageNames": [
         "osism",
         "osism.*",
+        "osism/**",
         "netbox-manager",
         "openstack-image-manager",
         "openstack-flavor-manager",
