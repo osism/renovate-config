@@ -16,7 +16,9 @@
    "packageRules":[
       {
          "matchFileNames": ["**/.zuul.yaml"],
-         "groupName": "test-role"
+         "groupName": "test-role",
+         "description": "ansible_molecule_ansible_version installs the molecule control node on the CI test nodes, one of which (debian-bookworm) ships system Python 3.11. ansible >=13 requires Python >=3.12, so bumps to 13/14 cannot install there and red the whole buildset. Cap at <13 until every molecule node provides Python 3.12 (drop bookworm or install 3.12 there).",
+         "allowedVersions": "<13"
       }
    ]
 }
